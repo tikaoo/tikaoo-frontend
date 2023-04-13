@@ -1,0 +1,74 @@
+<h1>Simular Empréstimo </h1>
+<hr />
+<div>
+  <div class="container-fluid" >
+    <form [formGroup]="formularioEmprestimo">
+      <div class="row">
+        <div class="col-12">
+          <div class="mb-3">
+            <label for="mensal" class="form-label">Renda Mensal</label>
+            <input
+              id="renda"
+              type="number"
+              class="form-control"
+              formControlName="renda"
+              [(ngModel)]="formularioEmprestimo.value.renda"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="valorInicial" class="form-label"
+              >Valor Desejado</label
+            >
+            <input
+              id="valorInicial"
+              type="text"
+              class="form-control"
+              formControlName="valorInicial"
+              [(ngModel)]="formularioEmprestimo.value.valorInicial"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="valor-final" class="form-label">Valor Final</label>
+            <p >{{valorFinal | currency: 'BRL'}} </p>
+          </div>
+          <div class="mb-3">
+            <label for="tipo" class="form-label">Tipo de Relacionamento</label>
+            <p> {{relacionamento}}</p>
+          </div>
+        </div>
+        <div>
+          <p>
+            <br />
+            Relacionamento OURO: Para clientes com renda mensal bruta acima de
+            R$ 10.000,00 ou renda mensal líquida acima de R$ 8.000,00, e que
+            tenham um histórico de renda estável e alto patrimônio líquido. Este
+            nível pode oferecer os empréstimos com juros mais baixos, limites de
+            crédito mais altos e acesso a benefícios exclusivos, como
+            consultoria financeira personalizada.<br />
+
+            Relacionamento PRATA: Para clientes com renda mensal bruta entre R$
+            5.000,00 e R$ 10.000,00 ou renda mensal líquida entre R$ 4.000,00 e
+            R$ 8.000,00, e que tenham um histórico de renda estável. Este nível
+            pode oferecer empréstimos com juros moderados e limites de crédito
+            razoáveis, além de benefícios adicionais, como prazos de pagamento
+            mais flexíveis.<br />
+
+            Relacionamento BRONZE: Para clientes com renda mensal bruta abaixo
+            de R$ 5.000,00 ou renda mensal líquida abaixo de R$ 4.000,00, ou
+            para aqueles com histórico de crédito limitado ou instável. Este
+            nível pode oferecer empréstimos com juros mais altos e limites de
+            crédito mais baixos, mas ainda oferecer acesso a empréstimos
+            pessoais, desde que o cliente atenda aos critérios mínimos de
+            elegibilidade.<br />
+            OBS:Lembrando que esses valores são para novos clientes, caso você
+            já seja nosso cliente e possua outros emprestimos essa valor sofrerá
+            alteração.<br />
+          </p>
+        </div>
+      </div>
+            <div class="row"></div>
+      <button type="submit" class="btn btn-dark" (click)="calcular()">Simular</button><br>
+     <br><button routerLink="/clientes/emprestimo" class="btn btn-dark">Contratar emprestimo agora!</button>
+    </form>
+  </div>
+</div>
