@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListarClientesComponent } from './page/Clientes/listar-clientes/listar-clientes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfirmExitGuard } from './guard/confirm-exit.guard';
+import { ListarEmprestimoComponent } from './page/emprestimo/listar-emprestimo/listar-emprestimo.component';
+import { CadastrarEmprestimoComponent } from './page/emprestimo/cadastrar-emprestimo/cadastrar-emprestimo.component';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { ConfirmExitGuard } from './guard/confirm-exit.guard';
     AtualizarClientesComponent,
     SimularEmprestimoComponent,
     ListarClientesComponent,
+    ListarEmprestimoComponent,
+    CadastrarEmprestimoComponent,
 
 
 

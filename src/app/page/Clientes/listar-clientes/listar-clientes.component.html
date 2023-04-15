@@ -2,6 +2,9 @@
 <a routerLink="/home" class="btn btn-dark"> voltar</a>
 <hr />
 <a routerLink="/clientes/cadastrar" class="btn btn-dark"> Novo Cliente</a>
+<a routerLink="/emprestimos" class="btn btn-dark"> Deletar Empréstimo</a>
+
+
 <table class="table table-striped table-bordered mt-3">
   <thead>
     <tr>
@@ -49,7 +52,16 @@
         >
           <span class="material-symbols-outlined"> delete </span>
         </button>
+
+        <button
+          class="btn btn-primary"
+          [routerLink]=" '/clientes/' + cliente.cpf + '/emprestimos'"
+        >
+          <span class="material-symbols-outlined"> add </span>
+        </button>
+
       </td>
     </tr>
+
   </tbody>
 </table>

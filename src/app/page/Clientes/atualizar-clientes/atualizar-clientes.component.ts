@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+
 import { ICliente } from 'src/app/model/Cliente';
 import { ClienteHttpService } from 'src/app/service/ClienteHttpService ';
 import Swal from 'sweetalert2';
@@ -10,8 +11,9 @@ import Swal from 'sweetalert2';
   templateUrl: './atualizar-clientes.component.html',
   styleUrls: ['./atualizar-clientes.component.css']
 })
-export class AtualizarClientesComponent {
+export class AtualizarClientesComponent   {
 
+  private formMudou: boolean = false;
   clienteForm: FormGroup = this.fb.group({
     nome: ['', Validators.required],
     logradouro:['',Validators.required],
@@ -35,6 +37,7 @@ export class AtualizarClientesComponent {
       private route: ActivatedRoute,
       private router:Router
     ) { }
+
 
     cpfCliente=0
 
@@ -74,6 +77,25 @@ atualizar() {
   )
   });
 }
+onInput(){
+  this.formMudou = true;
+  console.log('mudou');
+}
+
+podeMudarRota(){
+
+  if (this.formMudou) {
+    confirm('Tem certeza que deseja sair dessa página?');
+  }
+
+  return true;
+
+}
+podeDesativar(){
+  return this.podeMudarRota();
+}
+
+
 
 
 }

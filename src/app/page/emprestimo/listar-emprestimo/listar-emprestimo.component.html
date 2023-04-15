@@ -1,0 +1,46 @@
+<h1>Clientes</h1>
+<a routerLink="/clientes" class="btn btn-dark"> voltar</a>
+<hr />
+
+<table class="table table-striped table-bordered mt-3">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Data Inicial</th>
+      <th scope="col">Data Final</th>
+      <th scope="col">Valor Inicial</th>
+      <th scope="col">Valor Final</th>
+      <th scope="col">Relacionamento</th>
+      <th scope="col">CPF</th>
+           <th scope="col">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emprestimo of emprestimos">
+      <th scope="row">{{ emprestimo.idEmprestimo }}</th>
+      <td>{{ emprestimo.dataInicial }}</td>
+      <td>{{ emprestimo.dataFinal }}</td>
+      <td>{{ emprestimo.valorInicial }}</td>
+      <td>{{ emprestimo.valorFinal  }}</td>
+      <td>{{ emprestimo.relacionamento }}</td>
+      <td>{{ emprestimo.cpfCliente }}</td>
+
+      <td>
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="deleteEmprestimo(emprestimo.cpfCliente,emprestimo.idEmprestimo)"
+        >
+          <span class="material-symbols-outlined"> delete </span>
+        </button>
+        <button
+        class="btn btn-primary"
+        [routerLink]=" '/clientes/' + emprestimo.cpfCliente + '/emprestimos'"
+      >
+        <span class="material-symbols-outlined"> add </span>
+      </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+

@@ -1,0 +1,77 @@
+<h1>Cadastrar Emprestimo</h1>
+<a routerLink="/clientes" class="btn btn-dark"> voltar</a>
+<hr />
+<div>
+  <div class="container-fluid">
+    <form  [formGroup]="emprestimoForm">
+      <div class="row">
+         <div>
+          <div class="mb-3">
+            <label for="valorInicial" class="form-label" >Valor Inicial</label>
+            <input
+              id="valorInicial"
+              type="number"
+              class="form-control"
+              formControlName="valorInicial"
+              [(ngModel)]="emprestimoForm.value.valorInicial"
+            />
+          </div>
+        </div>
+        
+
+        <div class="col-12">
+          <div class="mb-3">
+            <label for="valorfinal" class="form-label" >Valor Final</label>
+            <strong><p >{{valorFinal | currency: 'BRL'}} </p></strong>
+          </div>
+        </div>
+        <div>
+          <div class="mb-3" >
+            <label for="relacionamento" class="form-label">Tipo de relacionamento</label>
+            <strong><p> {{relacionamento}}</p></strong>
+          </div>
+        </div>
+        <div>
+          <div class="mb-3">
+            <label for="rendaMensal" class="form-label">Renda Mensal</label>
+            <input
+              id="rendaMensal"
+              type="number"
+              class="form-control"
+              formControlName="rendaMensal"
+              [(ngModel)]="clienteForm.value.rendaMensal"
+
+            />
+            <div>
+              <div class="mb-3">
+                <label for="dataInicial" class="form-label" >Data Inicial</label>
+                <input
+                  id="dataInicial"
+                  type="date"
+                  class="form-control"
+                  formControlName="dataInicial"
+                />
+              </div>
+            </div>
+            <div>
+              <div class="mb-3">
+                <label for="dataFinal" class="form-label" >Data Final</label>
+                <input
+                  id="dataFinal"
+                  type="date"
+                  class="form-control"
+                  formControlName="dataFinal"
+                />
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary"  (click)="calcular()">calcular valor do emprestimo</button>
+          </div>
+        </div>
+      </div>
+      <div class="row"></div>
+      <button type="submit" class="btn btn-dark"  (click)="cadastrar()">Cadastrar</button>
+    </form>
+  </div>
+</div>
+

@@ -5,6 +5,8 @@ import { ConfirmExitGuard } from './guard/confirm-exit.guard';
 import { AtualizarClientesComponent } from './page/Clientes/atualizar-clientes/atualizar-clientes.component';
 import { CadastrarClienteComponent } from './page/Clientes/cadastrar-cliente/cadastrar-cliente.component';
 import { ListarClientesComponent } from './page/Clientes/listar-clientes/listar-clientes.component';
+import { CadastrarEmprestimoComponent } from './page/emprestimo/cadastrar-emprestimo/cadastrar-emprestimo.component';
+import { ListarEmprestimoComponent } from './page/emprestimo/listar-emprestimo/listar-emprestimo.component';
 import { SimularEmprestimoComponent } from './page/emprestimo/simular-emprestimo/simular-emprestimo.component';
 
 const routes: Routes = [
@@ -37,6 +39,16 @@ const routes: Routes = [
     path: 'clientes',
     component: ListarClientesComponent,
   },
+  {
+    path: 'emprestimos',
+    component: ListarEmprestimoComponent,
+  },
+
+  {
+    path: 'clientes/:cpf/emprestimos',
+    component: CadastrarEmprestimoComponent,
+  },
+
 
 ];
 

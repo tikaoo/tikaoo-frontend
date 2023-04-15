@@ -32,6 +32,8 @@ export class CadastrarClienteComponent implements ICanDeactivate {
     private router: Router
   ) {}
 
+  
+
   cadastrar() {
     const cliente: ICliente = this.clienteForm.value as ICliente;
     this.clienteHttpService.createCliente(cliente).subscribe(

@@ -1,9 +1,9 @@
 export interface IEmprestimo {
-  idEmprestimo?:number,
+  idEmprestimo:number,
   dataFinal:Date,
    dataInicial:Date,
-   valorfinal: number,
+   valorFinal: number,
    valorInicial:number,
    relacionamento:string,
-   cpfCliente?:number
+   cpfCliente:number
 }
