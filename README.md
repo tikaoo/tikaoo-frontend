@@ -4,7 +4,7 @@ O projeto Fintech é uma aplicação Angular desenvolvida para consumir a API cr
 
 #Como instalar e executar o projeto:
 
-Instale o Angular CLI, digitando npm install -g @angular/cli no terminal. Faça o clone da aplicação através do comando git clone https://github.com/tikaoo/frontend_mindsait.git. Execute npm install para baixar as dependências. Execute a aplicação através do comando ng serve. Acesse a aplicação através do endereço http://localhost:4200.
+Instale o Angular CLI, digitando npm install -g @angular/cli no terminal. Faça o clone da aplicação através do comando git clone https://github.com/tikaoo/frontend_mindsait.git . Execute npm install para baixar as dependências. Execute a aplicação através do comando ng serve. Acesse a aplicação através do endereço http://localhost:4200.
 
 #Exemplos de uso:
 
