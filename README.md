@@ -1,6 +1,6 @@
 #Fintech 
 
-O projeto Fintech é uma aplicação Angular desenvolvida para consumir a API criada no projeto trainee da Mindsait Indra. Ele simula uma fintech do ramo financeiro onde você pode adicionar, criar, atualizar a lista de clientes, adicionar e deletar empréstimos usando como chave estrangeira o CPF.
+O projeto Fintech é uma aplicação Angular desenvolvida para consumir a API criada no projeto Backend. Ele simula uma fintech do ramo financeiro onde você pode adicionar, criar, atualizar a lista de clientes, adicionar e deletar empréstimos usando como chave estrangeira o CPF.
 
 #Como instalar e executar o projeto:
 
